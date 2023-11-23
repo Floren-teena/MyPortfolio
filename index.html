@@ -30,13 +30,11 @@
       /></a>
       <!--Use mooli font here-->
       <nav>
-        <a href="#" class="active">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <!--search if portfolio or my projects fits better-->
-        <a href="#">Portfolio</a>
-        <!--search if contact or contact me fits better-->
-        <a href="#">Contact</a>
+        <a href="#" style="--i: 1">Home</a>
+        <a href="#" style="--i: 2">About</a>
+        <a href="#" style="--i: 3">Services</a>
+        <a href="#" style="--i: 4">Portfolio</a>
+        <a href="#" style="--i: 5">Contact</a>
         <!--write js code from chatgpt to toggle dark mode-->
         <img
           id="darkModeToggle"
@@ -44,6 +42,7 @@
           alt="Dark Mode Toggle"
           height="25px"
           width="25px"
+          style="--i: 6"
         />
       </nav>
     </header>
@@ -51,9 +50,11 @@
     <!-- ========>> Hero Section <<======== -->
     <div class="hero-container">
       <div class="hero-info">
-        <h3>Hello I&apos;m</h3>
+        <h3 class="intro">Hello I&apos;m</h3>
         <h1>Florentina Antigha</h1>
-        <h3>And I&apos;m a <span>Web Developer</span></h3>
+        <h3 class="profession">
+          And I&apos;m a <span id="changing-text">Front-end Developer</span>
+        </h3>
         <p>
           As a dedicated freelancer based in Abuja, Nigeria, I specialize in
           delivering professional services encompassing website development,
@@ -61,10 +62,10 @@
         </p>
 
         <!-- ========>> Social Media icons <<======== -->
-        <a href="#"><i class="uil uil-linkedin"></i></a>
-        <a href="#"><i class="uil uil-github"></i></a>
-        <a href="#"><i class="uil uil-twitter"></i></a>
-        <a href="#"><i class="uil uil-instagram"></i></a> <br />
+        <a href="#"><i class="uil uil-linkedin" style="--i: 7"></i></a>
+        <a href="#"><i class="uil uil-github" style="--i: 8"></i></a>
+        <a href="#"><i class="uil uil-twitter" style="--i: 9"></i></a>
+        <a href="#"><i class="uil uil-instagram" style="--i: 10"></i></a> <br />
         <button type="button" class="resume-btn">Resume</button>
       </div>
       <div class="hero-image">
@@ -75,5 +76,9 @@
         />
       </div>
     </div>
+    <!-- ========>> Linking javascript <<======== -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script src="script.js"></script>
   </body>
 </html>

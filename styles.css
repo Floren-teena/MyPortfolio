@@ -21,8 +21,8 @@ body {
 }
 
 .logo {
-  animation: slideLeft 1s ease forwards;
-  /* opacity: 0; */
+  animation: logo 1s ease forwards;
+  opacity: 0;
 }
 
 nav a {
@@ -31,6 +31,14 @@ nav a {
   margin-right: 16px;
   font-weight: 600;
   position: relative;
+}
+
+nav a,
+#darkModeToggle {
+  display: inline-block;
+  animation: navMenu 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+  opacity: 0;
 }
 
 nav a::after {
@@ -73,20 +81,36 @@ nav {
   letter-spacing: 1px;
 }
 
+.hero-info h3 span {
+  color: teal;
+}
+
+.intro {
+  animation: intro 1s ease forwards;
+  opacity: 0;
+}
+
+.profession {
+  animation: profession 1s ease forwards;
+  opacity: 0;
+}
+
 .hero-info h1 {
   font-size: 60px;
   font-weight: 600;
   color: teal;
   letter-spacing: 1px;
-}
-
-.hero-info h3 span {
-  color: teal;
+  animation: myName 0.5s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
 }
 
 p {
   line-height: 27px;
   margin: 20px 85px 30px 0px;
+  animation: paragraph 1s ease forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
 }
 
 i {
@@ -97,6 +121,9 @@ i {
   color: teal;
   margin: 0px 10px;
   transition: 0.3ms;
+  animation: socialIcons 1s ease forwards;
+  animation-delay: calc(0.3s * var(--i));
+  opacity: 0;
 }
 
 i:hover {
@@ -113,12 +140,120 @@ i:hover {
   font-weight: 700;
   font-size: 17px;
   transition: 0.3s;
+  animation: resumeBtn 1s ease forwards;
+  animation-delay: 1.5s;
+  opacity: 0;
 }
 
 .resume-btn:hover {
   box-shadow: 0 0 10px teal;
 }
 
-.hero-image {
+.hero-image img {
   margin-top: -70px;
+  animation: zoomIn 1s ease forwards;
+  animation-delay: 1s;
+  opacity: 0;
 }
+
+/* ============>> Animations for Hero Section <<============ */
+@keyframes logo {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes navMenu {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes intro {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes profession {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes myName {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes paragraph {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes socialIcons {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes resumeBtn {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ============>> Media Query for Hero Section <<============ */
