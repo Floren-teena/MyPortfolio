@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  /* background-color: #080808; */
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 10%;
+}
+
+.logo {
+  animation: slideLeft 1s ease forwards;
+  /* opacity: 0; */
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  margin-right: 16px;
+  font-weight: 600;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: teal;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav {
+  position: relative;
+}
+
+#darkModeToggle {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+}
+
+/* ============>> Hero Section <<============ */
+.hero-container {
+  display: flex;
+  padding: 25px 10%;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-info h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 10px 0px;
+  letter-spacing: 1px;
+}
+
+.hero-info h1 {
+  font-size: 60px;
+  font-weight: 600;
+  color: teal;
+  letter-spacing: 1px;
+}
+
+.hero-info h3 span {
+  color: teal;
+}
+
+p {
+  line-height: 27px;
+  margin: 20px 85px 30px 0px;
+}
+
+i {
+  position: relative;
+  border: 2px solid teal;
+  padding: 10px;
+  border-radius: 50%;
+  color: teal;
+  margin: 0px 10px;
+  transition: 0.3ms;
+}
+
+i:hover {
+  box-shadow: 0 0 20px teal;
+}
+
+.resume-btn {
+  background-color: teal;
+  margin-top: 40px;
+  padding: 15px 50px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+.resume-btn:hover {
+  box-shadow: 0 0 10px teal;
+}
+
+.hero-image {
+  margin-top: -70px;
+}
