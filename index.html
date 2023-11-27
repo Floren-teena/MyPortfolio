@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <!-- ========================================>> Head Section <<======================================== -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,68 +19,153 @@
       href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
     />
   </head>
+
+  <!-- ========================================>> Body Section <<======================================== -->
   <body>
-    <!--Don"t forget to commit as you code!!!-->
-    <header id="header">
-      <a href="#">
-        <img
-          src="images/logo.png"
-          alt="My Logo"
-          height="50px"
-          width="50px"
-          class="logo"
-      /></a>
-      <!--Use mooli font here-->
-      <nav>
-        <a href="#" style="--i: 1">Home</a>
-        <a href="#" style="--i: 2">About</a>
-        <a href="#" style="--i: 3">Services</a>
-        <a href="#" style="--i: 4">Portfolio</a>
-        <a href="#" style="--i: 5">Contact</a>
-        <!--write js code from chatgpt to toggle dark mode-->
-        <img
-          id="darkModeToggle"
-          src="images/dark-mode-icon.png"
-          alt="Dark Mode Toggle"
-          height="25px"
-          width="25px"
-          style="--i: 6"
-        />
-      </nav>
-    </header>
+    <main>
+      <section class="index-page">
+        <header id="header">
+          <a href="#">
+            <img
+              src="images/logo.png"
+              alt="My Logo"
+              height="50px"
+              width="50px"
+              class="logo"
+          /></a>
+          
+          <!-- ===========================>> Navigation Bar <<=========================== -->
+          <nav>
+            <a href="/" style="--i: 1">Home</a>
+            <a href="#about-page" style="--i: 2">About</a>
+            <a href="#services-page" style="--i: 3">Services</a>
+            <a href="#" style="--i: 4">Portfolio</a>
+            <a href="#" style="--i: 5">Contact</a>
+            <!--write js code from chatgpt to toggle dark mode-->
+            <img
+              id="darkModeToggle"
+              src="images/dark-mode-icon.png"
+              alt="Dark Mode Toggle"
+              height="25px"
+              width="25px"
+              style="--i: 6"
+            />
+          </nav>
+        </header>
 
-    <!-- ========>> Hero Section <<======== -->
-    <div class="hero-container">
-      <div class="hero-info">
-        <h3 class="intro">Hello I&apos;m</h3>
-        <h1>Florentina Antigha</h1>
-        <h3 class="profession">
-          And I&apos;m a <span id="changing-text">Front-end Developer</span>
-        </h3>
-        <p>
-          As a dedicated freelancer based in Abuja, Nigeria, I specialize in
-          delivering professional services encompassing website development,
-          expert DevOps solutions, and impactful programming education.
-        </p>
+        <!-- ===========================>> Hero Section <<=========================== -->
+        <div class="hero-container">
+          <div class="hero-info">
+            <h3 class="intro">Hello I&apos;m</h3>
+            <h1>Florentina Antigha</h1>
+            <h3 class="profession">
+              And I&apos;m a <span id="changing-text">Front-end Developer</span>
+            </h3>
+            <p class="hero-paragraph">
+              As a dedicated freelancer based in Abuja, Nigeria, I specialize in
+              delivering professional services encompassing website development,
+              expert DevOps solutions, and impactful programming education.
+            </p>
 
-        <!-- ========>> Social Media icons <<======== -->
-        <a href="#"><i class="uil uil-linkedin" style="--i: 7"></i></a>
-        <a href="#"><i class="uil uil-github" style="--i: 8"></i></a>
-        <a href="#"><i class="uil uil-twitter" style="--i: 9"></i></a>
-        <a href="#"><i class="uil uil-instagram" style="--i: 10"></i></a> <br />
-        <button type="button" class="resume-btn">Resume</button>
-      </div>
-      <div class="hero-image">
-        <img
-          src="images/Ellipse 2.png"
-          alt="An Image of myself"
-          width="300px"
-        />
-      </div>
-    </div>
-    <!-- ========>> Linking javascript <<======== -->
+            <!-- ========>> Social Media icons for Hero Section <<======== -->
+            <a href="#"><i class="uil uil-linkedin" style="--i: 7"></i></a>
+            <a href="#"><i class="uil uil-github" style="--i: 8"></i></a>
+            <a href="#"><i class="uil uil-twitter" style="--i: 9"></i></a>
+            <a href="#"><i class="uil uil-instagram" style="--i: 10"></i></a>
+            <br />
+            <button type="button" class="resume-btn">Resume</button>
+          </div>
+          <div class="hero-image">
+            <img
+              src="images/Ellipse 2.png"
+              alt="An Image of myself"
+              width="300px"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!--===========================>> About Page <<=========================== -->
+      <section id="about-page">
+        <div class="about-container">
+          <div class="row">
+            <div class="about-image">
+              <img src="images/White_top.jpeg" alt="An Image of myself" />
+            </div>
+            <div class="about-info">
+              <h1 class="sub-title">About Me</h1>
+              <p class="about-paragraph">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+              </div>
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li>
+                    <span>Web Development</span><br />Build Front-end of
+                    Websites and Web Applications
+                  </li>
+                  <li>
+                    <span>DevOps</span><br />Streamline and optimize Software
+                    Development workflows
+                  </li>
+                  <li>
+                    <span>Coding Tutor</span><br />Teach programming to kids
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="experience">
+                <ul>
+                  <li>
+                    <span>For Experience</span><br />Build Front-end of
+                    Websites and Web Applications
+                  </li>
+                  <li>
+                    <span>DevOps</span><br />Streamline and optimize Software
+                    Development workflows
+                  </li>
+                  <li>
+                    <span>Coding Tutor</span><br />Teach programming to kids
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li>
+                    <span>For Education</span><br />Build Front-end of
+                    Websites and Web Applications
+                  </li>
+                  <li>
+                    <span>DevOps</span><br />Streamline and optimize Software
+                    Development workflows
+                  </li>
+                  <li>
+                    <span>Coding Tutor</span><br />Teach programming to kids
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===========================>> Services Page <<=========================== -->
+      <section id="services-page">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          
+        </div>
+      </section>
+    </main>
+
+    <!-- ===========================>> Linking javascript <<=========================== -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
     <script src="script.js"></script>
   </body>
 </html>
