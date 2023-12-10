@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <!-- ========================================>> Head Section <<======================================== -->
   <head>
     <meta charset="UTF-8" />
@@ -33,14 +32,17 @@
               width="50px"
               class="logo"
           /></a>
-          
+
           <!-- ===========================>> Navigation Bar <<=========================== -->
           <nav>
             <a href="/" style="--i: 1">Home</a>
             <a href="#about-page" style="--i: 2">About</a>
             <a href="#services-page" style="--i: 3">Services</a>
-            <a href="#" style="--i: 4">Portfolio</a>
-            <a href="#" style="--i: 5">Contact</a>
+            <a href="#portfolio-page" style="--i: 4">Portfolio</a>
+            <a href="https://medium.com/@florentinaantigha27" style="--i: 5"
+              >Blog</a
+            >
+            <a href="#contact-page" style="--i: 6">Contact</a>
             <!--write js code from chatgpt to toggle dark mode-->
             <img
               id="darkModeToggle"
@@ -68,10 +70,16 @@
             </p>
 
             <!-- ========>> Social Media icons for Hero Section <<======== -->
-            <a href="#"><i class="uil uil-linkedin" style="--i: 7"></i></a>
-            <a href="#"><i class="uil uil-github" style="--i: 8"></i></a>
-            <a href="#"><i class="uil uil-twitter" style="--i: 9"></i></a>
-            <a href="#"><i class="uil uil-instagram" style="--i: 10"></i></a>
+            <a href="https://www.linkedin.com/in/florentina-antigha-85793826a/"
+              ><i class="uil uil-linkedin icon" style="--i: 7"></i
+            ></a>
+            <a href="https://github.com/Floren-teena/"
+              ><i class="uil uil-github icon" style="--i: 8"></i
+            ></a>
+            <a href="#"><i class="uil uil-twitter icon" style="--i: 9"></i></a>
+            <a href="https://www.instagram.com/floren__teena/"
+              ><i class="uil uil-instagram icon" style="--i: 10"></i
+            ></a>
             <br />
             <button type="button" class="resume-btn">Resume</button>
           </div>
@@ -87,69 +95,71 @@
 
       <!--===========================>> About Page <<=========================== -->
       <section id="about-page">
-        <div class="about-container">
-          <div class="row">
-            <div class="about-image">
-              <img src="images/White_top.jpeg" alt="An Image of myself" />
-            </div>
-            <div class="about-info">
-              <h1 class="sub-title">About Me</h1>
-              <p class="about-paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+        <div class="row">
+          <div class="about-image">
+            <img src="images/White_top.jpeg" alt="An Image of myself" />
+          </div>
+          <div class="about-info">
+            <h1 class="sub-title">About Me</h1>
+            <p class="about-paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
               </p>
-              <div class="tab-titles">
-                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                <p class="tab-links" onclick="opentab('education')">Education</p>
-              </div>
-              <div class="tab-contents active-tab" id="skills">
-                <ul>
-                  <li>
-                    <span>Web Development</span><br />Build Front-end of
-                    Websites and Web Applications
-                  </li>
-                  <li>
-                    <span>DevOps</span><br />Streamline and optimize Software
-                    Development workflows
-                  </li>
-                  <li>
-                    <span>Coding Tutor</span><br />Teach programming to kids
-                  </li>
-                </ul>
-              </div>
-              <div class="tab-contents" id="experience">
-                <ul>
-                  <li>
-                    <span>For Experience</span><br />Build Front-end of
-                    Websites and Web Applications
-                  </li>
-                  <li>
-                    <span>DevOps</span><br />Streamline and optimize Software
-                    Development workflows
-                  </li>
-                  <li>
-                    <span>Coding Tutor</span><br />Teach programming to kids
-                  </li>
-                </ul>
-              </div>
-              <div class="tab-contents" id="education">
-                <ul>
-                  <li>
-                    <span>For Education</span><br />Build Front-end of
-                    Websites and Web Applications
-                  </li>
-                  <li>
-                    <span>DevOps</span><br />Streamline and optimize Software
-                    Development workflows
-                  </li>
-                  <li>
-                    <span>Coding Tutor</span><br />Teach programming to kids
-                  </li>
-                </ul>
-              </div>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li>
+                  <span>Web Development</span><br />Build Front-end of Websites
+                  and Web Applications
+                </li>
+                <li>
+                  <span>DevOps</span><br />Streamline and optimize Software
+                  Development workflows
+                </li>
+                <li>
+                  <span>Coding Tutor</span><br />Teach programming to kids
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>For Experience</span><br />Build Front-end of Websites
+                  and Web Applications
+                </li>
+                <li>
+                  <span>DevOps</span><br />Streamline and optimize Software
+                  Development workflows
+                </li>
+                <li>
+                  <span>Coding Tutor</span><br />Teach programming to kids
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>For Education</span><br />Build Front-end of Websites
+                  and Web Applications
+                </li>
+                <li>
+                  <span>DevOps</span><br />Streamline and optimize Software
+                  Development workflows
+                </li>
+                <li>
+                  <span>Coding Tutor</span><br />Teach programming to kids
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -159,13 +169,162 @@
       <section id="services-page">
         <h1 class="sub-title">My Services</h1>
         <div class="services-list">
-          
+          <div>
+            <h2>Front-end Developer</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div>
+            <h2>DevOps Engineer</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <div>
+            <h2>Coding Instructor</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===========================>> Portfolio Page <<=========================== -->
+      <section id="portfolio-page">
+        <h1 class="sub-title">My Portfolio</h1>
+        <div class="portfolio-list">
+          <div class="portfolio">
+            <div class="image-container">
+              <img
+                src="images/tina-interiors.png"
+                alt="An image of Tina Interiors website"
+              />
+            </div>
+            <div class="portfolio-info">
+              <h3>Interior Design Website</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div class="layer">
+              <a href=""
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="portfolio">
+            <div class="image-container">
+              <img
+                src="images/flos-movies-app.png"
+                alt="An image of Flos movie app website"
+              />
+            </div>
+            <div class="portfolio-info">
+              <h3>Interior Design Website</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div class="layer">
+              <a href=""
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="portfolio">
+            <div class="image-container">
+              <img
+                src="images/tina-interiors-image-gallery.png"
+                alt="An image of Tina Interiors Image Gallery Website"
+              />
+            </div>
+            <div class="portfolio-info">
+              <h3>Interior Design Website</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div class="layer">
+              <a href=""
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <button class="more-btn"><a href="portfolio.html">See More</a></button>
+      </section>
+
+      <!-- ===========================>> Contact Page <<=========================== -->
+      <section id="contact-page">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <h3 class="text1 contact-info">
+              Interested in collaborating with me?
+            </h3>
+            <p class="text2 contact-info">
+              Send a message <i class="fa-solid fa-arrow-right"></i>
+            </p>
+            <!-- <p id="orText" class="contact-info">or</p> -->
+            <p id="emailParagraph">
+              <i class="fa-solid fa-envelope contact-info"></i>
+              <a
+                id="emailLink"
+                title="florentinaantigha27@gmail.com"
+                href="mailto:florentinaantigha27@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20%0A%0AI'm interested in discussing potential opportunities. Please let me know your availability for a meeting.%0A%0AThank you,%0A[Your Name]"
+                >Send an email</a
+              >
+            </p>
+            <!-- <p>
+              <i class="fa-solid fa-phone contact-info"></i> +234 706-941-2179
+            </p> -->
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="form-btn">Submit</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
 
-    <!-- ===========================>> Linking javascript <<=========================== -->
+    <!-- =======================>> Footer <<======================= -->
+    <div class="footer">
+      <!-- &copy; {new Date().getFullYear()} Florentina Antigha -->
+      <!-- <p>Copyright &copy; </p> -->
+      <p>
+        &copy;
+        <span id="copyright"
+          >2023 Florentina Antigha | All Rights Reserved</span
+        >
+      </p>
+    </div>
+
+    <!-- =======================>> Linking javascript <<======================== -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script
+      src="https://kit.fontawesome.com/60abaa02ed.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>
