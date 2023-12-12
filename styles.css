@@ -128,7 +128,7 @@ nav {
 .hero-paragraph {
   line-height: 27px;
   margin: 20px 85px 30px 0px;
-  /* color: #808080; */
+  color: rgba(29, 32, 29, 0.87);
   animation: paragraph 1s ease forwards;
   animation-delay: 1.2s;
   opacity: 0;
@@ -320,7 +320,7 @@ button:hover {
 .sub-title {
   font-size: 50px;
   font-weight: 600;
-  color: black;
+  color: teal;
 }
 
 .about-paragraph {
@@ -415,6 +415,10 @@ button:hover {
   transform: translateY(-10px);
 }
 
+.services-list div p {
+  color: rgba(29, 32, 29, 0.79);
+}
+
 /* ====================>> Portfolio Page <<==================== */
 #main-portfolio-page {
   display: flex;
@@ -425,9 +429,9 @@ button:hover {
   padding-bottom: 50px;
 }
 
-.text-teal {
+/* .text-teal {
   color: teal;
-}
+} */
 
 #portfolio-page {
   height: 100vh;
@@ -438,11 +442,19 @@ button:hover {
   align-items: center;
 }
 
+#intro-heading {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 25px;
+  color: rgba(29, 32, 29, 0.79);
+}
+
 .portfolio-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 10px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .main-portfolio-list {
@@ -468,35 +480,51 @@ button:hover {
 }
 
 .portfolio-info {
-  font-size: 13px;
-  font-weight: 300;
-  padding: 20px 15px 30px;
+  /* font-weight: 300; */
+  padding: 20px 10px 30px 15px;
   background: #d3e1e1;
+  width: 100%;
+  height: 190px;
+  margin-top: -10px;
 }
 
 .portfolio-info h3 {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 19px;
+  font-weight: 600;
   margin-top: 10px;
+  color: teal;
 }
 
 .portfolio-info p {
   margin-top: 10px;
+  /* padding-right: 0px; */
+  color: black;
+  font-weight: 400;
+  line-height: 22px;
+  font-size: 14px;
 }
 
 .layer {
   height: 0;
   width: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.6),  teal);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), teal);
   border-radius: 8px;
   position: absolute;
   left: 0;
   bottom: 0;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   transition: height 0.5s;
+}
+
+.layer a {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  margin-top: 10px;
 }
 
 .layer i {
@@ -507,6 +535,25 @@ button:hover {
   background: #fff;
   width: 60px;
   height: 60px;
+}
+
+.layer p {
+  color: #fff;
+  padding: 0px 10px;
+}
+
+.layer-title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-weight: 600;
+}
+
+.layer-value {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-weight: 400;
 }
 
 .portfolio:hover img {
@@ -563,6 +610,7 @@ button:hover {
 .contact-left p {
   font-size: 18px;
   font-weight: 600;
+  color: rgba(29, 32, 29, 0.79);
 }
 
 .contact-left p i {
@@ -581,10 +629,6 @@ button:hover {
   margin-left: 5px;
 }
 
-#orText {
-  margin-left: 90px;
-}
-
 .text2 {
   /* margin-top: 10px; */
   margin-left: 5px;
@@ -595,7 +639,7 @@ button:hover {
 }
 
 #emailLink {
-  color: black;
+  color: rgba(29, 32, 29, 0.79);
   text-decoration: none;
 }
 
