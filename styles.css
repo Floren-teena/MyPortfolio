@@ -139,11 +139,14 @@ i {
   border: 2px solid teal;
   padding: 10px;
   border-radius: 50%;
-  color: teal;
   margin: 0px 10px;
 }
 
 .icon {
+  color: teal;
+}
+
+.hero-icon {
   transition: transform 0.3ms;
   /* transition: transform var(--hover-transition-duration); */
   animation: socialIcons 1s ease forwards;
@@ -389,36 +392,43 @@ button:hover {
 .services-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 40px;
+  grid-gap: 25px;
   margin-top: 50px;
 }
 
 .services-list div {
   background: #d3e1e1;
-  padding: 60px 40px;
+  padding: 25px 25px 30px 25px;
+  /* height: 200px;
+  width: 300px; */
   border-radius: 15px;
   font-size: 14px;
   font-weight: 300;
   transition: background 0.5s, transform 0.5s;
 }
 
-/* .services-list div i {} */
+.services-list div i {
+  font-size: 50px;
+  margin: 0px 0px 20px 0px;
+  padding: 0;
+  border: none;
+}
 
 .services-list div h2 {
-  font-size: 30px;
-  font-weight: 500;
-  margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .services-list div:hover {
   background: rgb(48, 123, 123);
   transform: translateY(-10px);
+  color: white;
 }
 
-.services-list div p {
-  color: rgba(29, 32, 29, 0.79);
+.services-list p {
+  line-height: 20px;
 }
-
 /* ====================>> Portfolio Page <<==================== */
 #main-portfolio-page {
   display: flex;
