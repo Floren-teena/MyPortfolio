@@ -35,8 +35,19 @@ main {
   padding: 25px 0;
 }
 
-.logo {
-  animation: logo 1s ease forwards;
+#logo {
+  height: 50px;
+  width: 50px;
+}
+
+.left-to-right {
+  animation: left-to-right 1s ease forwards;
+  opacity: 0;
+}
+
+.animation-delay {
+  animation: left-to-right 1s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
   opacity: 0;
 }
 
@@ -127,11 +138,17 @@ nav {
 
 .hero-paragraph {
   line-height: 27px;
-  margin: 20px 85px 30px 0px;
+  padding: 20px 85px 25px 0px;
   color: rgba(29, 32, 29, 0.87);
-  animation: paragraph 1s ease forwards;
-  animation-delay: 1.2s;
+}
+
+.right-to-left {
+  animation: right-to-left 1s ease forwards;
   opacity: 0;
+}
+
+#animation-delay-hero {
+  animation-delay: 1.2s;
 }
 
 i {
@@ -141,6 +158,10 @@ i {
   font-size: 16.4px;
   border-radius: 50%;
   margin: 0px 10px;
+}
+
+.icon-shift-left {
+  margin-left: -10px;
 }
 
 .icon {
@@ -163,7 +184,7 @@ i:hover {
 }
 
 .button {
-  width: 180px;
+  width: 30%;
   background-color: teal;
   color: #fff;
   padding: 15px 50px;
@@ -173,7 +194,7 @@ i:hover {
   border-radius: 30px;
   cursor: pointer;
   transition: 0.3s;
-  animation: resumeBtn 1s ease forwards;
+  animation: bottom-to-top 1s ease forwards;
   animation-delay: 1.5s;
   opacity: 0;
 }
@@ -185,7 +206,7 @@ i:hover {
 }
 
 #resume-button {
-  margin-top: 30px;
+  margin-top: 10px;
   letter-spacing: 1px;
 }
 
@@ -195,14 +216,18 @@ i:hover {
 }
 
 .hero-image img {
-  margin-top: -70px;
+  width: 300px;
+  margin-bottom: 120px;
+}
+
+.zoom-in {
   animation: zoomIn 1s ease forwards;
   animation-delay: 1s;
   opacity: 0;
 }
 
 /* ====================>> Animations for Hero Section <<==================== */
-@keyframes logo {
+@keyframes left-to-right {
   0% {
     transform: translateX(-100px);
     opacity: 0;
@@ -257,7 +282,7 @@ i:hover {
   }
 }
 
-@keyframes paragraph {
+@keyframes right-to-left {
   0% {
     transform: translateX(100px);
     opacity: 0;
@@ -280,7 +305,7 @@ i:hover {
   }
 }
 
-@keyframes resumeBtn {
+@keyframes bottom-to-top {
   0% {
     transform: translateY(100px);
     opacity: 0;
@@ -632,10 +657,6 @@ i:hover {
   margin-left: 5px;
 }
 
-#emailParagraph {
-  margin-left: -10px;
-}
-
 #emailLink {
   color: rgba(29, 32, 29, 0.79);
   text-decoration: none;
@@ -665,6 +686,23 @@ form textarea {
 .form-btn {
   font-size: 18px;
   margin-top: 20px;
+  animation-delay: 0s;
+}
+
+/* ====================== Scroll to Top Icon ====================== */
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#scrollToTop.visible {
+  opacity: 1;
+  visibility: visible;
 }
 
 /* ====================>> Footer <<==================== */
@@ -678,3 +716,50 @@ form textarea {
   bottom: 0;
   /* margin-top: 20px; */
 }
+
+/* ======================================>> Media Queries <<====================================== */
+  /* ====================>> For Tablet screens <<==================== */
+    /* ===============>> Hero Section <<=============== */
+    @media only screen and (max-width: 768px) {
+    main {
+      padding: 0 8%;
+    }
+    #header {
+      font-size: 15px;
+    }
+    #logo {
+      height: 40px;
+      width: 40px;
+    }
+    .hero-info h3 {
+      font-size: 22px;
+    }
+    .hero-info h1 {
+      font-size: 35px;
+    }
+    .hero-paragraph {
+      font-size: 13px;
+      line-height: 24px;
+      padding: 10px 30px 15px 0px;
+    }
+    .hero-image img {
+      width: 230px;
+    }
+    i {
+      padding: 13px;
+      font-size: 14px;
+    }
+    .button {
+      width: 40%;
+      padding: 13px 45px;
+      font-size: 15px;
+    }
+    #resume-button {
+      margin-top: 0px;
+    }
+  }
+
+  /* ===============>> About Page <<=============== */
+  
+
+/* ====================>> For Mobile screens <<==================== */

@@ -18,16 +18,14 @@
   <!-- ========================================>> Body Section <<======================================== -->
   <body>
     <main>
-      <section class="index-page">
+      <section id="index-page" class="index-page">
         <header id="header">
-          <a href="#">
-            <img
-              src="images/logo.png"
-              alt="My Logo"
-              height="50px"
-              width="50px"
-              class="logo"
-          /></a>
+          <img
+            id="logo"
+            src="images/logo.png"
+            alt="My Logo"
+            class="left-to-right"
+          />
 
           <!-- ===========================>> Navigation Bar <<=========================== -->
           <nav>
@@ -59,33 +57,41 @@
             <h3 class="profession">
               And I&apos;m a <span id="changing-text">Front-end Developer</span>
             </h3>
-            <p class="hero-paragraph">
+            <p id="animation-delay-hero" class="hero-paragraph right-to-left">
               As a dedicated freelancer based in Abuja, Nigeria, I specialize in
               delivering professional services encompassing website development,
               expert DevOps solutions, and impactful programming education.
             </p>
 
             <!-- ========>> Social Media icons for Hero Section <<======== -->
-            <a
-              href="https://www.linkedin.com/in/florentina-antigha-85793826a/"
-              target="_blank"
-              ><i
-                class="fa-brands fa-linkedin icon hero-icon"
-                style="--i: 7"
-              ></i
-            ></a>
-            <a href="https://github.com/Floren-teena/" target="_blank"
-              ><i class="fa-brands fa-github icon hero-icon" style="--i: 8"></i
-            ></a>
-            <a href="https://twitter.com/Floren__teeena" target="_blank"
-              ><i class="fa-brands fa-twitter icon hero-icon" style="--i: 9"></i
-            ></a>
-            <a href="https://www.instagram.com/floren__teena/" target="_blank"
-              ><i
-                class="fa-brands fa-instagram icon hero-icon"
-                style="--i: 10"
-              ></i
-            ></a>
+            <div class="icon-shift-left">
+              <a
+                href="https://www.linkedin.com/in/florentina-antigha-85793826a/"
+                target="_blank"
+                ><i
+                  class="fa-brands fa-linkedin icon hero-icon"
+                  style="--i: 7"
+                ></i
+              ></a>
+              <a href="https://github.com/Floren-teena/" target="_blank"
+                ><i
+                  class="fa-brands fa-github icon hero-icon"
+                  style="--i: 8"
+                ></i
+              ></a>
+              <a href="https://twitter.com/Floren__teeena" target="_blank"
+                ><i
+                  class="fa-brands fa-twitter icon hero-icon"
+                  style="--i: 9"
+                ></i
+              ></a>
+              <a href="https://www.instagram.com/floren__teena/" target="_blank"
+                ><i
+                  class="fa-brands fa-instagram icon hero-icon"
+                  style="--i: 10"
+                ></i
+              ></a>
+            </div>
             <br />
             <a
               href="https://drive.google.com/file/d/1ESGRZE6sQY_rfR60suvJzShaCabTFxZB/view?usp=sharing"
@@ -95,12 +101,8 @@
               >Resume</a
             >
           </div>
-          <div class="hero-image">
-            <img
-              src="images/Ellipse 2.png"
-              alt="An Image of myself"
-              width="300px"
-            />
+          <div class="hero-image zoom-in">
+            <img src="images/Ellipse 2.png" alt="An Image of myself" />
           </div>
         </div>
       </section>
@@ -108,12 +110,12 @@
       <!--===========================>> About Page <<=========================== -->
       <section id="about-page">
         <div class="row">
-          <div class="about-image">
+          <div class="about-image zoom-in">
             <img src="images/White_top.jpeg" alt="An Image of myself" />
           </div>
           <div class="about-info">
-            <h1 class="sub-title">About Me</h1>
-            <p class="about-paragraph">
+            <h1 class="sub-title intro">About Me</h1>
+            <p class="about-paragraph right-to-left">
               My name is Florentina. I am a versatile professional with a
               Computer Science degree, skilled in DevOps Engineering and
               Front-end Web Development. I excel in fostering collaboration
@@ -121,14 +123,28 @@
               digital experiences. I am also a skilled Coding Instructor,
               inspiring young minds through creative coding education.
             </p>
-            <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">
+            <div class="tab-titles left-to-right">
+              <p
+                class="tab-links active-link animation-delay"
+                onclick="opentab('skills')"
+                style="--i: 4"
+              >
                 Skills
               </p>
-              <p class="tab-links" onclick="opentab('experience')">
+              <p
+                class="tab-links animation-delay"
+                onclick="opentab('experience')"
+                style="--i: 6"
+              >
                 Experience
               </p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p
+                class="tab-links animation-delay"
+                onclick="opentab('education')"
+                style="--i: 7"
+              >
+                Education
+              </p>
             </div>
             <!--====================>> Skills section <<==================== -->
             <div class="tab-contents active-tab" id="skills">
@@ -187,9 +203,9 @@
 
       <!-- ===========================>> Services Page <<=========================== -->
       <section id="services-page">
-        <h1 class="sub-title">My Services</h1>
+        <h1 class="sub-title intro">My Services</h1>
         <div class="services-list">
-          <div>
+          <div class="left-to-right">
             <i class="fa-solid fa-code"></i>
             <h2>Front-end Developer</h2>
             <p>
@@ -212,7 +228,7 @@
               the development lifecycle.
             </p>
           </div>
-          <div>
+          <div class="right-to-left">
             <i class="fa-solid fa-person-chalkboard"></i>
             <h2>Coding Instructor</h2>
             <p>
@@ -229,13 +245,13 @@
 
       <!-- ===========================>> Portfolio Page <<=========================== -->
       <section id="portfolio-page">
-        <h1 class="sub-title">My Portfolio</h1>
+        <h1 class="sub-title intro">My Portfolio</h1>
         <h2 id="intro-heading">
           Explore a collection of my latest projects, each illustrating my
           expertise and enthusiasm for web development:
         </h2>
         <div class="portfolio-list">
-          <div class="portfolio">
+          <div class="portfolio left-to-right">
             <div class="image-container">
               <img
                 src="images/tina-interiors.png"
@@ -280,7 +296,7 @@
                 alt="An image of Flos movie app website"
               />
             </div>
-            <div class="portfolio-info">
+            <div class="portfolio-info intro">
               <h3>Flo's Movie App</h3>
               <p>
                 Discover and explore a world of cinematic wonders on Flo's Movie
@@ -306,7 +322,7 @@
               </p>
             </div>
           </div>
-          <div class="portfolio">
+          <div class="portfolio right-to-left">
             <div class="image-container">
               <img
                 src="images/tina-interiors-image-gallery.png"
@@ -352,8 +368,8 @@
       <!-- ===========================>> Contact Page <<=========================== -->
       <section id="contact-page">
         <div class="row">
-          <div class="contact-left">
-            <h1 class="sub-title">Contact Me</h1>
+          <div class="contact-left left-to-right">
+            <h1 class="sub-title intro">Contact Me</h1>
             <h3 class="text1 contact-info">
               Interested in collaborating with me?
             </h3>
@@ -361,7 +377,7 @@
               Send a message <i class="fa-solid fa-arrow-right icon"></i>
             </p>
             <!-- <p id="orText" class="contact-info">or</p> -->
-            <p id="emailParagraph">
+            <p class="icon-shift-left">
               <i class="fa-solid fa-envelope contact-info icon"></i>
               <a
                 id="emailLink"
@@ -374,7 +390,7 @@
               <i class="fa-solid fa-phone contact-info"></i> +234 706-941-2179
             </p> -->
           </div>
-          <div class="contact-right">
+          <div class="contact-right right-to-left">
             <form>
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
@@ -395,9 +411,14 @@
       </section>
 
       <!-- ====================== Scroll to Top Icon ====================== -->
-      <!-- <div id="scrollToTop" class="hidden" onclick="scrollToTop()">
-        <img src="" alt="Scroll to Top">
-      </div> -->
+      <div id="scrollToTop" onclick="scrollToTop()" title="Scroll Back to Top">
+        <img
+          src="images/Green-up-arrow.png"
+          alt="Scroll to Top Image"
+          height="85px"
+          width="55px"
+        />
+      </div>
     </main>
 
     <!-- =======================>> Footer <<======================= -->
