@@ -23,6 +23,8 @@ main {
 
 .index-page {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* ====================>> Navigation Bar <<==================== */
@@ -178,7 +180,7 @@ i {
   display: inline-block;
 }
 
-i:hover {
+.icon:hover {
   box-shadow: 0 0 10px teal;
   --hover-translateY: -5px;
 }
@@ -330,7 +332,7 @@ i:hover {
 /* ====================>> About Page <<==================== */
 #about-page {
   height: 100vh;
-  padding: 80px 0;
+  padding: 50px 0;
   color: #a9a9a9;
 }
 
@@ -354,14 +356,15 @@ i:hover {
 }
 
 .sub-title {
-  font-size: 50px;
+  font-size: 3.1rem;
   font-weight: 600;
   color: teal;
 }
 
 .about-paragraph {
   line-height: 25px;
-  padding: 0 75px 0 0;
+  padding: 0 50px 0 0;
+  /* font-size: 15.5px; */
 }
 
 .tab-titles {
@@ -395,6 +398,7 @@ i:hover {
 .tab-contents ul li {
   list-style: none;
   margin: 10px 0;
+  font-size: 15px;
 }
 
 .tab-contents ul li span {
@@ -412,80 +416,72 @@ i:hover {
 }
 
 /* ====================>> Services Page <<==================== */
-/* might change 30px to 80px */
-#services-page {
+.services {
   height: 100vh;
-  padding: 30px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-.services-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 25px;
-  margin-top: 50px;
+.services h1 {
+  text-align: center;
 }
 
-.services-list div {
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.services-box {
+  flex: 0 0 calc(33.33% - 15px);
   background: #d3e1e1;
-  padding: 25px 25px 30px 25px;
-  /* height: 200px;
-  width: 300px; */
-  border-radius: 15px;
-  font-size: 14px;
-  font-weight: 300;
-  transition: background 0.5s, transform 0.5s;
+  padding: 1rem 2rem 2.5rem;
+  /* padding: 16px 23px 40px; */
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background 0.5s, transform 0.5s, box-shadow 0.3s ease;
 }
 
-.services-list div i {
-  font-size: 50px;
-  margin: 0px 0px 20px 0px;
-  padding: 0;
+.services-box i {
+  font-size: 3rem;
   border: none;
+  padding: 1rem 0;
 }
 
-.services-list div h2 {
-  font-size: 25px;
+.services-box h2 {
+  font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 10px;
 }
 
-.services-list div:hover {
-  background: rgb(48, 123, 123);
-  transform: translateY(-10px);
-  color: white;
-}
-
-.services-list p {
+.services-box p {
+  margin: 1rem 0 0;
+  font-weight: 400;
+  font-size: 0.875rem;
   line-height: 20px;
 }
+
+.services-box:hover {
+  background: rgb(48, 123, 123);
+  transform: translateY(-10px); /*not working on all boxes*/
+  color: white;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
 /* ====================>> Portfolio Page <<==================== */
-#main-portfolio-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-/* .text-teal {
-  color: teal;
-} */
-
-#portfolio-page {
+.portfolio {
   height: 100vh;
-  padding: 50px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
-#intro-heading {
+.portfolio h1 {
+  text-align: center;
+}
+
+.intro-heading {
   font-weight: 400;
   font-size: 20px;
   text-align: center;
@@ -493,42 +489,34 @@ i:hover {
   color: rgba(29, 32, 29, 0.79);
 }
 
-.portfolio-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 10px;
-  margin-top: 30px;
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
 }
 
-.main-portfolio-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(1fr, 1fr));
-  grid-gap: 25px;
-  margin-top: 50px;
-}
-
-.portfolio {
+.portfolio-box {
+  flex: 0 0 calc(33.33% - 10px);
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
-.portfolio img {
+.portfolio-box img {
   width: 100%;
   height: 100%;
   display: block;
-  border-bottom: solid black 1px;
   transition: transform 0.5s;
 }
 
 .portfolio-info {
-  /* font-weight: 300; */
-  padding: 20px 10px 30px 15px;
+  padding: 10px 25px 30px;
   background: #d3e1e1;
   width: 100%;
-  height: 190px;
-  margin-top: -10px;
+  height: 100%;
 }
 
 .portfolio-info h3 {
@@ -540,7 +528,6 @@ i:hover {
 
 .portfolio-info p {
   margin-top: 10px;
-  /* padding-right: 0px; */
   color: black;
   font-weight: 400;
   line-height: 22px;
@@ -559,14 +546,12 @@ i:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
   transition: height 0.5s;
 }
 
 .layer a {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   margin-top: 10px;
 }
 
@@ -599,11 +584,15 @@ i:hover {
   font-weight: 400;
 }
 
-.portfolio:hover img {
+.portfolio-box:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-box:hover img {
   transform: scale(1.1);
 }
 
-.portfolio:hover .layer {
+.portfolio-box:hover .layer {
   height: 100%;
 }
 
@@ -630,6 +619,13 @@ i:hover {
   margin-top: 25px;
 }
 
+.contact-left h3 {
+  font-size: 30px;
+  font-weight: 700;
+  color: teal;
+  margin-left: 5px;
+}
+
 .contact-left p {
   font-size: 18px;
   font-weight: 600;
@@ -644,16 +640,7 @@ i:hover {
   transform: translateY(-5px);
 }
 
-.text1 {
-  font-size: 30px;
-  font-weight: 700;
-  color: teal;
-  /* margin-top: 15px; */
-  margin-left: 5px;
-}
-
-.text2 {
-  /* margin-top: 10px; */
+.message {
   margin-left: 5px;
 }
 
@@ -690,7 +677,7 @@ form textarea {
 }
 
 /* ====================== Scroll to Top Icon ====================== */
-#scrollToTop {
+.scrollToTop {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -700,7 +687,12 @@ form textarea {
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-#scrollToTop.visible {
+.scrollToTop img {
+  height: 85px;
+  width: 55px;
+}
+
+.scrollToTop.visible {
   opacity: 1;
   visibility: visible;
 }
@@ -708,58 +700,335 @@ form textarea {
 /* ====================>> Footer <<==================== */
 .footer {
   width: 100%;
+  height: 10vh;
   text-align: center;
   padding: 25px 0;
   background: teal;
   font-weight: 300;
   color: #fff;
   bottom: 0;
-  /* margin-top: 20px; */
 }
 
 /* ======================================>> Media Queries <<====================================== */
-  /* ====================>> For Tablet screens <<==================== */
-    /* ===============>> Hero Section <<=============== */
-    @media only screen and (max-width: 768px) {
-    main {
-      padding: 0 8%;
-    }
-    #header {
-      font-size: 15px;
-    }
-    #logo {
-      height: 40px;
-      width: 40px;
-    }
-    .hero-info h3 {
-      font-size: 22px;
-    }
-    .hero-info h1 {
-      font-size: 35px;
-    }
-    .hero-paragraph {
-      font-size: 13px;
-      line-height: 24px;
-      padding: 10px 30px 15px 0px;
-    }
-    .hero-image img {
-      width: 230px;
-    }
-    i {
-      padding: 13px;
-      font-size: 14px;
-    }
-    .button {
-      width: 40%;
-      padding: 13px 45px;
-      font-size: 15px;
-    }
-    #resume-button {
-      margin-top: 0px;
-    }
+
+/* ====================>> Large Laptop screens <<==================== */
+/* ===============>> Hero Section <<=============== */
+@media (min-width: 1440px) {
+  main {
+    padding: 0 5%;
   }
+  #header {
+    font-size: 25px;
+    padding: 40px 0;
+  }
+  #logo {
+    height: 70px;
+    width: 70px;
+  }
+  .hero-container {
+    margin: 30px 0 0;
+  }
+  .hero-info h3 {
+    font-size: 40px;
+  }
+  .hero-info h1 {
+    font-size: 70px;
+  }
+  .hero-paragraph {
+    font-size: 25px;
+    line-height: 50px;
+  }
+  .hero-image img {
+    width: 400px;
+  }
+  i {
+    padding: 25px;
+    font-size: 20px;
+  }
+  .button {
+    padding: 20px 50px;
+    font-size: 25px;
+  }
+  #resume-button {
+    margin-top: 20px;
+  }
+}
+/* ===============>> About Page <<=============== */
+@media (min-width: 1440px) {
+  #about-page {
+    padding: 50px 0;
+    font-size: 25px;
+  }
+  .sub-title {
+    font-size: 60px;
+  }
+  .about-paragraph {
+    line-height: 40px;
+    padding: 10px 50px 0 0;
+  }
+  .tab-titles {
+    margin: 25px 0 35px;
+  }
+  .tab-links {
+    font-size: 27.3px;
+  }
+  .tab-contents ul li span {
+    font-size: 23px;
+  }
+}
+/* ===============>> Services Page <<=============== */
+@media (min-width: 1440px) {
+  .services-container {
+    margin-top: 3rem;
+  }
+  .services-box {
+    flex: 0 0 calc(33.33% - 15px);
+    padding: 1rem 1.7rem 2.5rem;
+  }
+  .services-box i {
+    font-size: 3rem;
+    padding: 1.5rem 0;
+  }
+  .services-box h2 {
+    font-size: 1.85rem;
+  }
+  .services-box p {
+    font-size: 25px;
+    line-height: 37px;
+  }
+}
+/* ===============>> Portfolio Page <<=============== */
+@media (min-width: 1440px) {
+  .intro-heading {
+    font-size: 30px;
+    margin-top: 25px;
+  }
+  .portfolio-info h3 {
+    font-size: 30px;
+  }
+  .portfolio-info p {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  .layer-title,
+  .layer-value {
+    font-size: 25px;
+  }
+}
+/* ===============>> Contact Page <<=============== */
+@media (min-width: 1440px) {
+  .contact-info {
+    margin-top: 35px;
+  }
+  .contact-left h3 {
+    font-size: 40px;
+  }
+  .contact-left p {
+    font-size: 25px;
+  }
+  form input,
+  form textarea {
+    font-size: 25px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  .form-btn {
+    font-size: 25px;
+    margin-top: 20px;
+  }
+}
+/* ===============>> Scroll to Top Icon <<=============== */
+@media (min-width: 1440px) {
+  .scrollToTop {
+    bottom: 20px;
+    right: 10px;
+  }
+  .scrollToTop img {
+    height: 110px;
+    width: 65px;
+  }
+}
+/* ===============>> Footer <<=============== */
+@media (min-width: 1440px) {
+  .footer {
+    font-size: 25px;
+    padding: 30px 0;
+  }
+}
 
-  /* ===============>> About Page <<=============== */
-  
+/* ====================>> Small Laptop screens <<==================== */
+/* ===============>> Hero Section <<=============== */
+@media (min-width: 769px) and (max-width: 1439px) {
+}
+/* ====================>> Tablet and Ipad screens <<==================== */
+/* ===============>> Hero Section <<=============== */
+@media (min-width: 481px) and (max-width: 768px) {
+  main {
+    padding: 0 5%;
+  }
+  #header {
+    font-size: 15px;
+  }
+  #logo {
+    height: 40px;
+    width: 40px;
+  }
+  .hero-info h3 {
+    font-size: 22px;
+  }
+  .hero-info h1 {
+    font-size: 35px;
+  }
+  .hero-paragraph {
+    font-size: 13px;
+    line-height: 24px;
+    padding: 10px 30px 15px 0px;
+  }
+  .hero-image img {
+    width: 230px;
+  }
+  i {
+    padding: 13px;
+    font-size: 15px;
+  }
+  .button {
+    width: 40%;
+    padding: 13px 45px;
+    font-size: 15px;
+  }
+  #resume-button {
+    margin-top: 0px;
+  }
+}
 
-/* ====================>> For Mobile screens <<==================== */
+/* ===============>> About Page <<=============== */
+@media (min-width: 481px) and (max-width: 768px) {
+  #about-page {
+    padding: 40px 0;
+    font-size: 12.5px;
+  }
+  .sub-title {
+    font-size: 30px;
+  }
+  .about-paragraph {
+    line-height: 22px;
+    padding: 0 20px 0 0;
+  }
+  .tab-titles {
+    margin: 10px 0 20px;
+  }
+  .tab-links {
+    font-size: 14px;
+  }
+  .tab-contents ul li span {
+    font-size: 11.5px;
+  }
+}
+
+/* ===============>> Services Page <<=============== */
+@media (min-width: 481px) and (max-width: 768px) {
+  .services-container {
+    margin-top: 1.5rem;
+  }
+  .services-box {
+    flex: 0 0 calc(33.33% - 10px);
+    padding: 0.5rem 1rem 1.3rem;
+  }
+  .services-box i {
+    font-size: 2rem;
+    padding: 0.5rem 0;
+    margin: 0 -0.125rem;
+  }
+  .services-box h2 {
+    font-size: 1.04rem;
+  }
+  .services-box p {
+    margin: 0.8rem 0 0;
+    font-size: 0.769rem;
+  }
+}
+
+/* ===============>> Portfolio Page <<=============== */
+@media (min-width: 481px) and (max-width: 768px) {
+  .intro-heading {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  .portfolio-container {
+    margin-top: 1.5rem;
+  }
+  .portfolio-info {
+    padding: 10px 15px 20px;
+  }
+  .portfolio-info h3 {
+    font-size: 16px;
+  }
+  .portfolio-info p {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .layer i {
+    font-size: 16px;
+    width: 50px;
+    height: 50px;
+  }
+  .layer-title,
+  .layer-value {
+    font-size: 14px;
+  }
+}
+
+/* ===============>> Contact Page <<=============== */
+@media (min-width: 481px) and (max-width: 768px) {
+  .contact-info {
+    margin-top: 15px;
+  }
+  .contact-left h3 {
+    font-size: 22px;
+  }
+  .contact-left p {
+    font-size: 16px;
+  }
+  .contact-left p i {
+    padding: 10px;
+    font-size: 12px;
+  }
+  form input,
+  form textarea {
+    font-size: 16px;
+    padding: 13px;
+    margin: 10px 0;
+  }
+  .form-btn {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+}
+
+/* ===============>> Scroll to Top Icon <<=============== */
+@media (min-width: 481px) and (max-width: 768px) {
+  .scrollToTop {
+    bottom: 20px;
+    right: 3px;
+  }
+  .scrollToTop img {
+    height: 65px;
+    width: 40px;
+  }
+}
+
+/* ===============>> Footer <<=============== */
+@media (min-width: 481px) and (max-width: 768px) {
+  .footer {
+    padding: 20px 0;
+  }
+}
+/* ====================>> Large Mobile screens <<==================== */
+/* ===============>> Hero Section <<=============== */
+@media (min-width: 376px) and (max-width: 480px) {
+}
+
+/* ====================>> Small Mobile screens <<==================== */
+/* ===============>> Hero Section <<=============== */
+@media (max-width: 375px) {
+}

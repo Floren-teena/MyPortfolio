@@ -1,6 +1,6 @@
 // Animation for the typing feature
 let type = new Typed("#changing-text", {
-  strings: ["Front-end Developer", "DevOps Engineer", "Coding Instructor"],
+  strings: ["Full-Stack Developer", "DevOps Engineer", "Coding Instructor"],
   typeSpeed: 60,
   backSpeed: 50,
   loop: true,
