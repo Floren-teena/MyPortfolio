@@ -1025,10 +1025,186 @@ form textarea {
 }
 /* ====================>> Large Mobile screens <<==================== */
 /* ===============>> Hero Section <<=============== */
-@media (min-width: 376px) and (max-width: 480px) {
-}
+/* @media (min-width: 376px) and (max-width: 480px) {
+
+} */
 
 /* ====================>> Small Mobile screens <<==================== */
 /* ===============>> Hero Section <<=============== */
-@media (max-width: 375px) {
+@media (max-width: 480px) {
+  main {
+    padding: 0 5%;
+  }
+
+  #header {
+    font-size: 12px;
+    padding: 20px 0;
+  }
+
+  #logo {
+    height: 35px;
+    width: 35px;
+  }
+
+  .hero-container {
+    margin: 20px 0 0;
+  }
+
+  .hero-info h3 {
+    font-size: 18px;
+  }
+
+  .hero-info h1 {
+    font-size: 28px;
+  }
+
+  .hero-paragraph {
+    font-size: 12px;
+    line-height: 20px;
+    padding: 10px 20px 15px 0px;
+  }
+
+  .hero-image img {
+    width: 200px;
+  }
+
+  i {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .button {
+    width: 50%;
+    padding: 10px 30px;
+    font-size: 13px;
+  }
+
+  #resume-button {
+    margin-top: 5px;
+  }
+
+  #about-page {
+    padding: 30px 0;
+    font-size: 10px;
+  }
+
+  .sub-title {
+    font-size: 25px;
+  }
+
+  .about-paragraph {
+    line-height: 20px;
+    padding: 0 15px 0 0;
+  }
+
+  .tab-titles {
+    margin: 10px 0 15px;
+  }
+
+  .tab-links {
+    font-size: 12px;
+  }
+
+  .tab-contents ul li span {
+    font-size: 10px;
+  }
+
+  .services-container {
+    margin-top: 1rem;
+  }
+
+  .services-box {
+    flex: 0 0 calc(50% - 10px);
+    padding: 0.5rem 1rem 1rem;
+  }
+
+  .services-box i {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .services-box h2 {
+    font-size: 1rem;
+  }
+
+  .services-box p {
+    margin: 0.5rem 0 0;
+    font-size: 0.75rem;
+  }
+
+  .intro-heading {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .portfolio-container {
+    margin-top: 1rem;
+  }
+
+  .portfolio-info {
+    padding: 10px 10px 15px;
+  }
+
+  .portfolio-info h3 {
+    font-size: 14px;
+  }
+
+  .portfolio-info p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .layer i {
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .layer-title,
+  .layer-value {
+    font-size: 12px;
+  }
+
+  .contact-info {
+    margin-top: 10px;
+  }
+
+  .contact-left h3 {
+    font-size: 20px;
+  }
+
+  .contact-left p {
+    font-size: 14px;
+  }
+
+  .contact-left p i {
+    padding: 8px;
+    font-size: 10px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 14px;
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .form-btn {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  .scrollToTop {
+    bottom: 10px;
+    right: 5px;
+  }
+
+  .scrollToTop img {
+    height: 55px;
+    width: 35px;
+  }
+
+  .footer {
+    padding: 15px 0;
+  }
 }
