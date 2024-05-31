@@ -715,7 +715,7 @@ form textarea {
 /* ===============>> Hero Section <<=============== */
 @media (min-width: 1440px) {
   main {
-    padding: 0 5%;
+    padding: 0 10%;
   }
   #header {
     font-size: 25px;
@@ -862,9 +862,13 @@ form textarea {
 }
 /* ====================>> Tablet and Ipad screens <<==================== */
 /* ===============>> Hero Section <<=============== */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (max-width: 768px) {
   main {
-    padding: 0 5%;
+    padding: 0 7%;
+    max-width: 100%;
+  }
+  .index-page, #about-page, .services, .portfolio, #contact-page {
+    height: auto;
   }
   #header {
     font-size: 15px;
@@ -950,6 +954,9 @@ form textarea {
 
 /* ===============>> Portfolio Page <<=============== */
 @media (min-width: 481px) and (max-width: 768px) {
+  .portfolio {
+    margin-top: 70px;
+  }
   .intro-heading {
     font-size: 16px;
     margin-top: 15px;
@@ -980,6 +987,10 @@ form textarea {
 
 /* ===============>> Contact Page <<=============== */
 @media (min-width: 481px) and (max-width: 768px) {
+  #contact-page {
+    margin-top: 70px;
+    margin-bottom: 30px;
+  }
   .contact-info {
     margin-top: 15px;
   }
@@ -1031,180 +1042,154 @@ form textarea {
 
 /* ====================>> Small Mobile screens <<==================== */
 /* ===============>> Hero Section <<=============== */
-@media (max-width: 480px) {
-  main {
-    padding: 0 5%;
+@media (max-width: 425px) {
+  .index-page, #about-page, .services, .portfolio, #contact-page {
+    height: auto;
   }
-
-  #header {
-    font-size: 12px;
-    padding: 20px 0;
-  }
-
-  #logo {
-    height: 35px;
-    width: 35px;
-  }
-
   .hero-container {
-    margin: 20px 0 0;
+    display: flex;
+    flex-direction: column-reverse;
   }
-
-  .hero-info h3 {
-    font-size: 18px;
-  }
-
   .hero-info h1 {
-    font-size: 28px;
+    font-size: 22px;
   }
-
-  .hero-paragraph {
-    font-size: 12px;
-    line-height: 20px;
-    padding: 10px 20px 15px 0px;
+  .hero-info p {
+    font-size: 16px;
   }
-
   .hero-image img {
-    width: 200px;
+    margin-bottom: 20px;
   }
-
-  i {
-    padding: 10px;
+  .button {
+    width: 80%;
+  }
+  nav a,
+  #darkModeToggle {
+    font-size: 12px;
+    margin-right: 6px;
+  }
+  .tab-links {
     font-size: 14px;
   }
-
-  .button {
-    width: 50%;
-    padding: 10px 30px;
+  .sub-title {
+    font-size: 1.5rem;
+  }
+  .about-paragraph {
+    line-height: 23px;
+    padding: 0 0 0 0;
+  }
+  .about-image {
+    display: none;
+  }
+  #about-me-h1 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .about-paragraph {
+    font: 16px;
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .tab-contents ul li {
+    font-size: 16px;
+  }
+  .services {
+    margin-bottom: 40px;
+  }
+  .services-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-icons i {
+    padding: 6px;
+  }
+  .contact-heading {
+    font-size: 16px;
+  }
+  .hero-paragraph {
+    padding: 20px 10px 25px 0px;
+    font-size: 14px;
+  }
+  .services-box {
+    margin-bottom: 25px;
+  }
+  .services-box p {
+    font-size: 16px;
+  }
+  .service-icon {
+    height: 50px;
+    width: 50px;
+  }
+  .service p {
     font-size: 13px;
   }
-
-  #resume-button {
-    margin-top: 5px;
+  .portfolio {
+    margin-bottom: 40px;
   }
+  .portfolio-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-image {
+    height: 150px;
+  }
+  .intro-heading {
+    font-size: 17px;
+  }
+  .portfolio-box {
+    margin-bottom: 25px;
+  }
+  #contact-page {
+    margin-bottom: 20px;
+  }
+  #contact-me-h1 {
+    text-align: center;
+  }
+  .contact-left, .contact-right {
+    padding: 0 10px;
+  }
+}
 
-  #about-page {
-    padding: 30px 0;
+@media (max-width: 320px) {
+  .hero-info h1 {
+    font-size: 18px;
+  }
+  .button {
+    width: 100%;
+  }
+  nav a,
+  #darkModeToggle {
     font-size: 10px;
+    margin-right: 4px;
   }
-
-  .sub-title {
-    font-size: 25px;
-  }
-
-  .about-paragraph {
-    line-height: 20px;
-    padding: 0 15px 0 0;
-  }
-
-  .tab-titles {
-    margin: 10px 0 15px;
-  }
-
   .tab-links {
     font-size: 12px;
   }
-
-  .tab-contents ul li span {
-    font-size: 10px;
+  .sub-title {
+    font-size: 1.2rem;
   }
-
-  .services-container {
-    margin-top: 1rem;
+  .contact-icons i {
+    padding: 4px;
   }
-
-  .services-box {
-    flex: 0 0 calc(50% - 10px);
-    padding: 0.5rem 1rem 1rem;
-  }
-
-  .services-box i {
-    font-size: 1.5rem;
-    padding: 0.5rem 0;
-  }
-
-  .services-box h2 {
-    font-size: 1rem;
-  }
-
-  .services-box p {
-    margin: 0.5rem 0 0;
-    font-size: 0.75rem;
-  }
-
-  .intro-heading {
-    font-size: 14px;
-    margin-top: 10px;
-  }
-
-  .portfolio-container {
-    margin-top: 1rem;
-  }
-
-  .portfolio-info {
-    padding: 10px 10px 15px;
-  }
-
-  .portfolio-info h3 {
+  .contact-heading {
     font-size: 14px;
   }
-
-  .portfolio-info p {
+  .hero-paragraph {
+    padding: 20px 5px 25px 0px;
     font-size: 12px;
-    line-height: 18px;
   }
-
-  .layer i {
-    font-size: 14px;
-    width: 40px;
+  .service-icon {
     height: 40px;
+    width: 40px;
   }
-
-  .layer-title,
-  .layer-value {
+  .service p {
     font-size: 12px;
   }
-
-  .contact-info {
-    margin-top: 10px;
+  .project-image {
+    height: 120px;
   }
-
-  .contact-left h3 {
-    font-size: 20px;
-  }
-
-  .contact-left p {
-    font-size: 14px;
-  }
-
-  .contact-left p i {
-    padding: 8px;
-    font-size: 10px;
-  }
-
-  form input,
-  form textarea {
-    font-size: 14px;
-    padding: 10px;
-    margin: 10px 0;
-  }
-
-  .form-btn {
-    font-size: 14px;
-    margin-top: 10px;
-  }
-
-  .scrollToTop {
-    bottom: 10px;
-    right: 5px;
-  }
-
-  .scrollToTop img {
-    height: 55px;
-    width: 35px;
-  }
-
-  .footer {
-    padding: 15px 0;
+  .contact-left, .contact-right {
+    padding: 0 5px;
   }
 }
