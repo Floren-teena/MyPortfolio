@@ -27,6 +27,9 @@ main {
   flex-direction: column;
 }
 
+.bold {
+  font-weight: 600;
+}
 /* ====================>> Navigation Bar <<==================== */
 
 #header {
